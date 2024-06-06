@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(203, 172, 94) ;
+    margin-top: 80px;
+
+}
+
+#calc {
+    background-color: rgb(124, 202, 205);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    width: 70%;
+
+}
