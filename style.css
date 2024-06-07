@@ -1,16 +1,99 @@
 body {
     display: flex;
     justify-content: center;
-    background-color:rgb(203, 172, 94) ;
+    background-color:rgb(187, 184, 184) ;
     margin-top: 80px;
 
 }
 
-#calc {
-    background-color: rgb(124, 202, 205);
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 8px ridge rgba(255, 255, 255, 0.614);
+    border-radius: 25px;
+    padding: 25px;
+    background-color: rgba(94, 93, 93, 0.933);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 2rem;
     text-align: center;
-    width: 70%;
+    width: 350px;
+    
+}
 
+#calc {
+    font-size: 1.1rem;
+    
+}
+#enter {
+    background-color: black;
+    border: 5px solid rgba(255, 255, 255, 0.614);
+    width: 280px;
+    height: 180px;
+    margin-bottom: 80px;
+    margin-top: 30px;
+}
+
+
+.entry-buttons {
+    margin: 2px;
+    gap: 1px;  
+}
+
+button {
+    color: rgb(55, 55, 55);
+    
+    border: 3px solid gray;
+    font-size: 1.2rem;  
+    width: 75px;
+    height: 60px;
+    
+    
+}
+
+#clear {
+    background-color: rgb(230, 165, 115);
+    border-radius: 50px;
+}
+
+#clear:hover {
+    background-color: rgb(193, 129, 81);
+    color: rgba(255, 255, 255, 0.884);
+}
+
+
+#delete {
+    background-color: rgb(210, 93, 93);
+    border-radius: 50px;
+}
+
+#delete:hover {
+    background-color: rgb(156, 51, 51);
+    color: rgba(255, 255, 255, 0.884);
+
+}
+
+
+.num {
+    border-radius: 10px;
+    background-color: rgb(201, 233, 234);
+}
+
+.num:hover {
+    color: rgba(255, 255, 255, 0.884);
+    background-color: rgb(144, 193, 195);
+}
+
+#equal {
+    width: 160px;    
+}
+
+.oper {
+    background-color: rgb(211, 233, 220);
+    border-radius: 50px;
+}
+
+.oper:hover {
+    color: rgba(255, 255, 255, 0.884);
+    background-color: rgb(164, 195, 177);
+    
 }
