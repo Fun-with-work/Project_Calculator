@@ -1,8 +1,9 @@
 body {
     display: flex;
     justify-content: center;
-    background-color:rgb(187, 184, 184) ;
-    margin-top: 80px;
+    background-color:rgb(224, 226, 223) ;
+    margin-top: 50px;
+    margin-bottom: 30px;
 
 }
 
@@ -10,13 +11,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 8px ridge rgba(255, 255, 255, 0.614);
-    border-radius: 25px;
+    border: 5px solid rgba(132, 129, 129, 0.547);
+    box-shadow: 0px 20px 0 0 #767676;
+    border-radius: 15px;
     padding: 25px;
-    background-color: rgba(94, 93, 93, 0.933);
+    background-color: rgba(114, 112, 112, 0.933);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    width: 350px;
+    width: 300px;
     
 }
 
@@ -25,33 +27,35 @@ body {
     
 }
 #enter {
-    background-color: black;
-    border: 5px solid rgba(255, 255, 255, 0.614);
-    width: 280px;
-    height: 180px;
+    background-color: rgb(16, 52, 16);
+    color: rgba(194, 191, 191, 0.825);
+    padding: 10px;
+    font-size: 1.1rem;
+    text-align: right;
+    border: 5px solid rgba(121, 119, 119, 0.614);
+    box-shadow: 0 8px 0 0 rgba(95, 94, 94, 0.614);
+    width: 260px;
+    height: 160px;
     margin-bottom: 80px;
     margin-top: 30px;
 }
 
 
-.entry-buttons {
+button {
     margin: 2px;
     gap: 1px;  
-}
-
-button {
     color: rgb(55, 55, 55);
-    
-    border: 3px solid gray;
     font-size: 1.2rem;  
-    width: 75px;
-    height: 60px;
+    width: 60px;
+    height: 55px;
     
     
 }
 
 #clear {
     background-color: rgb(230, 165, 115);
+    border: 3px solid rgb(224, 141, 78);
+    box-shadow: 0 8px 0 0 rgb(120, 71, 34);
     border-radius: 50px;
 }
 
@@ -63,19 +67,22 @@ button {
 
 #delete {
     background-color: rgb(210, 93, 93);
+    border: 3px solid rgb(208, 83, 83);
+    box-shadow: 0 8px 0 0 rgb(110, 37, 37);
     border-radius: 50px;
 }
 
 #delete:hover {
     background-color: rgb(156, 51, 51);
     color: rgba(255, 255, 255, 0.884);
-
 }
 
 
 .num {
+    background-color: rgb(165, 190, 190);
+    border: 3px solid rgb(145, 184, 185);
+    box-shadow: 0 8px 0 0 rgb(127, 161, 162);
     border-radius: 10px;
-    background-color: rgb(201, 233, 234);
 }
 
 .num:hover {
@@ -84,16 +91,18 @@ button {
 }
 
 #equal {
-    width: 160px;    
+    width: 130px;    
 }
 
-.oper {
-    background-color: rgb(211, 233, 220);
+.operation {
+    background-color: rgb(167, 180, 172);
+    border: 3px solid rgb(143, 191, 163);
+    box-shadow: 0 8px 0 0 rgb(123, 150, 134);
     border-radius: 50px;
 }
 
-.oper:hover {
-    color: rgba(255, 255, 255, 0.884);
+.operation:hover {
     background-color: rgb(164, 195, 177);
+    color: rgba(255, 255, 255, 0.884);
     
 }
