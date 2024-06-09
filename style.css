@@ -2,8 +2,8 @@ body {
     display: flex;
     justify-content: center;
     background-color:rgb(224, 226, 223) ;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -18,7 +18,7 @@ body {
     background-color: rgba(114, 112, 112, 0.933);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    width: 300px;
+    width: 270px;
     perspective: 10px ;
     transform: rotateX(35deg);    
 }
@@ -27,10 +27,9 @@ body {
     font-size: 1.1rem;
     background-color: rgb(16, 52, 16);
     padding: 10px;
-    text-align: right;
     border: 5px solid rgba(121, 119, 119, 0.614);
     box-shadow: 0 8px 0 0 rgba(95, 94, 94, 0.614);
-    width: 260px;
+    width: 240px;
     height: 160px;
     margin-bottom: 80px;
     margin-top: 30px;
@@ -38,20 +37,26 @@ body {
     transform: rotateX(0.05deg);    
 }
 #enter-previous, #enter-current {
+    text-align: right;
     background-color: rgb(16, 52, 16);
     color: rgba(194, 191, 191, 0.825);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    border: 5px solid rgba(16, 52, 16);
 }
 
+#entry-buttons {
+    margin-bottom: 40px;
+
+}
 
 button {
     margin: 2px;
     gap: 1px;  
     color: rgb(55, 55, 55);
     font-size: 1.2rem;  
-    width: 60px;
+    width: 50px;
     height: 55px;
-    
+    margin-bottom: 30px;
     
 }
 
@@ -86,8 +91,8 @@ button {
 
 
 .num {
-    background-color: rgb(165, 190, 190);
-    border: 3px solid rgb(145, 184, 185);
+    background-color: rgba(255, 255, 255, 0.685);
+    border: 3px solid rgb(255, 255, 255, 0.685);
     box-shadow: 0 8px 0 0 rgb(127, 161, 162);
     border-radius: 10px;
     perspective: 10px ;
@@ -101,7 +106,7 @@ button {
 }
 
 #equal {
-    width: 130px;    
+    width: 110px;    
     perspective: 10px;
     transform: rotateX(5deg);
 
