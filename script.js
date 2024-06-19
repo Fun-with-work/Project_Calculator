@@ -40,8 +40,9 @@ let totalNumTrimmed;
 clear.addEventListener("click", function() {
     previousNumber.innerText ="";
     input.innerText ="";
-    num1 = 0;
-    num2 = 0;
+    num1 = "";
+    num2 = "";
+    operator = "";
 });
 
 
@@ -73,28 +74,28 @@ operators.forEach (op => {
                 case "+":
                     sum = Number (num1) + Number (num2);
                     totalNum = (sum.toFixed(4))
-                    totalNumTrimmed = parseFloat (totalNum);
+                    totalNumTrimmed = Number (totalNum);
                     console.log (totalNumTrimmed);
                     break;
                     
                 case "-":
                     sum = Number (num1) - Number (num2);
                     totalNum = (sum.toFixed(4))
-                    totalNumTrimmed = parseFloat (totalNum);
+                    totalNumTrimmed = Number (totalNum);
                     console.log (totalNumTrimmed);
                     break;
                     
                 case "/":
                     sum = Number (num1) / Number (num2);
                     totalNum = (sum.toFixed(4))
-                    totalNumTrimmed = parseFloat (totalNum);
+                    totalNumTrimmed = Number (totalNum);
                     console.log (totalNumTrimmed);
                     break;
                     
                 case "*":
                     sum = Number (num1) * Number (num2);
                     totalNum = (sum.toFixed(4))
-                    totalNumTrimmed = parseFloat (totalNum);
+                    totalNumTrimmed = Number (totalNum);
                     console.log (totalNumTrimmed);
                     break;
 
