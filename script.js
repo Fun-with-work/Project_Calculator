@@ -9,8 +9,8 @@ const numbers = document.querySelectorAll(".Number")
 const operators = document.querySelectorAll(".operator")
 let numberDecimal= document.getElementById("decimal");
 const clear= document.getElementById("clear");
+let deleteNumber = document.getElementById("delete");
 
-// let deleteNumber = document.getElementById("delete");
 // let percentNumber= document.getElementById("percent");
 // let divideNumber= document.getElementById("divide");
 // let multiplyNumber= document.getElementById("multiply");
@@ -35,7 +35,6 @@ let num2;
 let sum;
 let operator ="";
 let totalNum = 0;
-let totalNumTrimmed;
 
 clear.addEventListener("click", function() {
     previousNumber.innerText ="";
@@ -45,14 +44,22 @@ clear.addEventListener("click", function() {
     operator = "";
 });
 
+deleteNumber.addEventListener("click", function() {
+    num1 = Number (num1.toString().slice(0, -1));
+    console.log (num1);
+} )
+
 
 numbers.forEach(number => {
     number.addEventListener("click", e => {
         if (operator ==="") {
             num1 += e.target.innerText;
             console.log(num1)
+            input.innerText = num1;
         } else {
             num2 += e.target.innerText;
+            previousNumber.innerText= num1 +" " + operator;
+            input.innerText = num2;
             console.log(num2)
         }
     })
@@ -73,35 +80,36 @@ operators.forEach (op => {
             switch (operator) {
                 case "+":
                     sum = Number (num1) + Number (num2);
-                    totalNum = (sum.toFixed(4))
-                    totalNumTrimmed = Number (totalNum);
-                    console.log (totalNumTrimmed);
+                    totalNum = Number (sum.toFixed(4))
+                    console.log (totalNum);
                     break;
                     
                 case "-":
                     sum = Number (num1) - Number (num2);
-                    totalNum = (sum.toFixed(4))
-                    totalNumTrimmed = Number (totalNum);
-                    console.log (totalNumTrimmed);
+                    totalNum = Number (sum.toFixed(4))
+                    console.log (totalNum);
                     break;
                     
                 case "/":
                     sum = Number (num1) / Number (num2);
-                    totalNum = (sum.toFixed(4))
-                    totalNumTrimmed = Number (totalNum);
-                    console.log (totalNumTrimmed);
+                    totalNum = Number (sum.toFixed(4))
+                    console.log (totalNum);
                     break;
                     
                 case "*":
                     sum = Number (num1) * Number (num2);
-                    totalNum = (sum.toFixed(4))
-                    totalNumTrimmed = Number (totalNum);
-                    console.log (totalNumTrimmed);
+                    totalNum = Number (sum.toFixed(4))
+                    console.log (totalNum);
+                    break;
+                    
+                case "%":
+                    sum = (num1 * num2) / 100;
+                    totalNum = Number (sum.toFixed(4))
+                    console.log (totalNum);
                     break;
 
                 default:
                     break;
-                    
             }
         }  
     });
@@ -119,17 +127,12 @@ operators.forEach (op => {
 //     })
 // }
 
- 
-
-
     // (input - Math.floor(input)) !== 0? 
         // input.innerText += "."
         // console.log ("decimal place")
     // : input.innerText = input.innerText
     // : console.log("it is whole")
 // } );    
-
-
 
 // addNumber.addEventListener("click", () => {
 //     num1 = Number (input.innerText);
