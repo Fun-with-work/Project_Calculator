@@ -1,11 +1,11 @@
         // Project: Calculator
 
-let calcScreen= document.getElementById("calc");
-let previousNumber= document.getElementById("enter-previous");
+let calcScreen= document.getElementById("calc-screen");
+let previousNumber= document.getElementById("previous-number");
 // let entryButtons= document.getElementById("entry-buttons");
 
-let input= document.getElementById("enter-current");
-const numbers = document.querySelectorAll(".Number")
+let input= document.getElementById("input");
+const numbers = document.querySelectorAll(".numbers")
 const operators = document.querySelectorAll(".operator")
 let numberDecimal= document.getElementById("decimal");
 const clear= document.getElementById("clear");
@@ -31,22 +31,28 @@ let deleteNumber = document.getElementById("delete");
 let displayNumber = "0";
 
 let num1;
+let num1WithCommas;
 let num2;
+let num2WithCommas;
 let sum;
 let operator ="";
-let totalNum = 0;
+let totalNum = "";
+let totalNumWithCommas = "";
 
 clear.addEventListener("click", function() {
     previousNumber.innerText ="";
     input.innerText ="";
     num1 = "";
     num2 = "";
+    num1WithCommas ="";
+    num2WithCommas ="";
     operator = "";
 });
 
 deleteNumber.addEventListener("click", function() {
     num1 = Number (num1.toString().slice(0, -1));
     console.log (num1);
+    input.innerText = num1;
 } )
 
 
@@ -54,13 +60,15 @@ numbers.forEach(number => {
     number.addEventListener("click", e => {
         if (operator ==="") {
             num1 += e.target.innerText;
-            console.log(num1)
-            input.innerText = num1;
+            num1WithCommas = num1.toLocaleString();
+            console.log(num1WithCommas)
+            input.innerText = num1WithCommas;
         } else {
             num2 += e.target.innerText;
-            previousNumber.innerText= num1 +" " + operator;
-            input.innerText = num2;
-            console.log(num2)
+            num2WithCommas = num2.toLocaleString();
+            previousNumber.innerText= num1WithCommas +" " + operator;
+            console.log(num2WithCommas)
+            input.innerText = num2WithCommas;
         }
     })
 });
@@ -71,7 +79,7 @@ operators.forEach (op => {
         if (e.target.innerText !== "=") {
             operator = e.target.innerText;
 
-            console.log(num1);
+            console.log(num1WithCommas);
             console.log(operator);
 
         }  else  {
@@ -81,31 +89,47 @@ operators.forEach (op => {
                 case "+":
                     sum = Number (num1) + Number (num2);
                     totalNum = Number (sum.toFixed(4))
-                    console.log (totalNum);
+                    totalNumWithCommas = totalNum.toLocaleString();
+                    console.log (totalNumWithCommas);
+                    previousNumber.innerText= num1WithCommas +" " + operator + " " + num2WithCommas;
+                    input.innerText = totalNumWithCommas;
                     break;
                     
                 case "-":
                     sum = Number (num1) - Number (num2);
                     totalNum = Number (sum.toFixed(4))
-                    console.log (totalNum);
+                    totalNumWithCommas = totalNum.toLocaleString();
+                    console.log (totalNumWithCommas);
+                    previousNumber.innerText= num1WithCommas +" " + operator + " " + num2WithCommas;
+                    input.innerText = totalNumWithCommas;
                     break;
                     
                 case "/":
                     sum = Number (num1) / Number (num2);
                     totalNum = Number (sum.toFixed(4))
-                    console.log (totalNum);
+                    totalNumWithCommas = totalNum.toLocaleString();
+                    console.log (totalNumWithCommas);
+                    previousNumber.innerText= num1WithCommas +" " + operator + " " + num2WithCommas;
+                    input.innerText = totalNumWithCommas;
+
                     break;
                     
                 case "*":
                     sum = Number (num1) * Number (num2);
                     totalNum = Number (sum.toFixed(4))
-                    console.log (totalNum);
+                    totalNumWithCommas = totalNum.toLocaleString();
+                    console.log (totalNumWithCommas);
+                    previousNumber.innerText= num1WithCommas +" " + operator + " " + num2WithCommas;
+                    input.innerText = totalNumWithCommas;
                     break;
                     
                 case "%":
                     sum = (num1 * num2) / 100;
                     totalNum = Number (sum.toFixed(4))
-                    console.log (totalNum);
+                    totalNumWithCommas = totalNum.toLocaleString();
+                    console.log (totalNumWithCommas);
+                    previousNumber.innerText= num1WithCommas +" " + operator + " " + num2WithCommas;
+                    input.innerText = totalNumWithCommas;
                     break;
 
                 default:
