@@ -21,7 +21,7 @@ body {
     transform: rotateX(35deg);    
 }
 
-#calc {
+#calc-screen {
     font-size: 1.1rem;
     background-color: rgb(16, 52, 16);
     padding: 10px;
@@ -33,7 +33,7 @@ body {
     margin-top: 30px;
 
 }
-#enter-previous, #enter-current {
+#previous-number, #input {
     text-align: right;
     background-color: rgb(16, 52, 16);
     color: rgba(194, 191, 191, 0.825);
@@ -86,7 +86,7 @@ button {
 }
 
 
-.Number {
+.numbers {
     background-color: rgba(255, 255, 255, 0.685);
     border: 3px solid rgb(255, 255, 255, 0.685);
     box-shadow: 0 8px 0 0 rgb(127, 161, 162);
@@ -95,7 +95,7 @@ button {
 
 }
 
-.Number:hover {
+.numbers:hover {
     color: rgba(255, 255, 255, 0.884);
     background-color: rgb(144, 193, 195);
 }
