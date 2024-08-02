@@ -33,10 +33,16 @@ clear.addEventListener("click", function() {
 });
 
 deleteNumber.addEventListener("click", function() {
-    num1 = Number (num1.toString().slice(0, -1));
-    console.log (num1);
-    input.innerText = num1;
-} )
+    if (operator ==="") {
+        num1 = Number (num1.toString().slice(0, -1));
+        console.log (num1);
+        input.innerText = num1;
+    } else {
+        num2 = Number (num2.toString().slice(0, -1));
+        console.log (num2);
+        input.innerText = num2;
+    }
+ } )
 
 
 numbers.forEach(number => {
