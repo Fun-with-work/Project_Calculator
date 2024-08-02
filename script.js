@@ -14,8 +14,10 @@ let deleteNumber = document.getElementById("delete");
 let displayNumber = "0";
 
 let num1;
+let num1Integer ;
 let num1WithCommas;
 let num2;
+let num2Integer ;
 let num2WithCommas;
 let sum;
 let operator ="";
@@ -49,12 +51,14 @@ numbers.forEach(number => {
     number.addEventListener("click", e => {
         if (operator ==="") {
             num1 += e.target.innerText;
-            num1WithCommas = num1.toLocaleString();
+            num1Integer = Number(num1)
+            num1WithCommas = num1Integer.toLocaleString();
             console.log(num1WithCommas)
             input.innerText = num1WithCommas;
         } else {
             num2 += e.target.innerText;
-            num2WithCommas = num2.toLocaleString();
+            num2Integer = Number(num2)
+            num2WithCommas = num2Integer.toLocaleString();
             previousNumber.innerText= num1WithCommas +" " + operator;
             console.log(num2WithCommas)
             input.innerText = num2WithCommas;
