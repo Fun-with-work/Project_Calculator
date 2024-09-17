@@ -76,17 +76,20 @@ numberDecimal.addEventListener("click", e => {
     if (operator === "") {
         if (num1 - Math.floor(num1) == 0) {
             num1 += e.target.innerText;
+            console.log(num1);
         }
         else num1 = num1;
-        console.log(num1);
+            console.log(num1);
 
     }
     else {
         if (num2 - Math.floor(num2) == 0) {
             num2 += e.target.innerText;
+            console.log(num2);
+
         }
         else num2 = num2;
-        console.log(num2);
+         console.log(num2);
 
     }
 
